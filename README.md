@@ -1,5 +1,7 @@
 # sandbox-cypress
 
+## Short overview
+
 Sandbox-cypress is a demo repository. The main goal is to:
 1. Understand Cypress basics
 2. Run test in the CI 
@@ -7,40 +9,39 @@ Sandbox-cypress is a demo repository. The main goal is to:
 
 ## CI Configuration
 
-**Build Steps:**
+TeamCity is used as a CI.
 
-1. Build Angular project:
+## TeamCity Build Steps:
 
-  `npm i`
-
-  `npm run ng serve`
-
-2. Npm install: 
-
-  `cd .\e2e\`
-
-  `npm ci`
-
-3. Cypress verify
-
-  `cd .\e2e\`
-
-  `npm run cy:verify`
-
-4. Run CI script
-
-  `cd .\e2e\`
-  
-  `npm run ci:teamcity`
+**Build Angular project:**
+```bash
+  npm i
+  npm run ng serve
+```  
+**Npm install:**
+```bash
+  cd .\e2e\
+  npm ci
+```  
+**Cypress verify**
+```bash
+  cd .\e2e\
+  npm run cy:verify
+```
+**Run CI script**
+```bash
+  cd .\e2e\
+  npm run ci:teamcity
+```
+## General Settings 
 
 **Artifact paths:**
-
-  `e2e\cypress\videos => e2e\cypress\videos`
-
-  `e2e\cypress\screenshots => e2e\cypress\screenshots`
-
+```text
+  e2e\cypress\videos => e2e\cypress\videos
+  e2e\cypress\screenshots => e2e\cypress\screenshots
+```
 ## Sources
 
-Cypress. Setting up CI: [https://docs.cypress.io/guides/guides/continuous-integration.html#Setting-up-CI](https://docs.cypress.io/guides/guides/continuous-integration.html#Setting-up-CI)
+**Cypress. Setting up CI:** [https://docs.cypress.io/guides/guides/continuous-integration.html#Setting-up-CI](https://docs.cypress.io/guides/guides/continuous-integration.html#Setting-up-CI)
 
-Angular web project: [https://github.com/angularexample/angular-9-example-app](https://docs.cypress.io/guides/guides/continuous-integration.html#Setting-up-CI)
+**Angular web project:** [https://github.com/angularexample/angular-9-example-app](https://docs.cypress.io/guides/guides/continuous-integration.html#Setting-up-CI)
