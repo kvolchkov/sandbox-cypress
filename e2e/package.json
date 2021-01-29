@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "test-ci":"cypress run --reporter teamcity"
+    "test-ci": "cypress run --reporter teamcity",
+    "cy:verify":"npx cypress verify",
+    "ci:teamcity": "cypress run --reporter mocha-teamcity-reporter"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,8 @@
   },
   "homepage": "https://github.com/kvolchkov/sandbox-cypress#readme",
   "dependencies": {
-    "cypress": "^6.3.0"
+    "cypress": "^6.3.0",
+    "mocha": "^8.2.1",
+    "mocha-teamcity-reporter": "^3.0.0"
   }
 }
