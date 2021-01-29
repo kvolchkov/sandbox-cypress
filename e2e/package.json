@@ -5,10 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "test-ci":"cypress run --reporter teamcity",
-    "ci:serve": "ng build --prod && http-server dist -p 4200",
-    "cypress:run": "cypress run --reporter teamcity",
-    "cypress:ci": "start-server-and-test ci:serve http://localhost:4200 cypress:run"
+    "test-ci":"cypress run --reporter teamcity"
   },
   "repository": {
     "type": "git",
