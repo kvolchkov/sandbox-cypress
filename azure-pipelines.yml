@@ -19,3 +19,8 @@ steps:
     npm run cy:verify
   displayName: 'cypess verify'  
   workingDirectory: e2e 
+  
+- script: |
+    npm run test-ci
+  displayName: 'cypess run'  
+  workingDirectory: e2e 
