@@ -16,7 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install
+    npm i
     npm run ng serve
     cd .\e2e\
     npm ci
