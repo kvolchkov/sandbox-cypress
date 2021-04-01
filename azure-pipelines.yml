@@ -17,9 +17,13 @@ steps:
 
 - script: |
     npm i
-    npm run ng serve
-    cd .\e2e\
-    npm ci
-    npm run cy:verify  
-    npm run ci:teamcity  
+- task: CmdLine@2
+  inputs:
+    script: |
+      npm i
+      npm run ng serve
+      cd .\e2e\
+      npm ci
+      npm run cy:verify
+      npm run ci:teamcity    
   displayName: 'npm install and build'
