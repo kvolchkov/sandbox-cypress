@@ -16,22 +16,6 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install
-    npm run ng serve
-  displayName: 'npm install and build'  
-  workingDirectory: app 
-
-- script: |
-    npm ci
-  displayName: 'npm ci'  
-  workingDirectory: e2e 
-
-- script: |
     npm run cy:verify
   displayName: 'cypess verify'  
   workingDirectory: e2e 
-
-- script: |
-    npm run test-ci
-  displayName: 'Run CI script'  
-  workingDirectory: e2e
