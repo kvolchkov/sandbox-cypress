@@ -17,8 +17,9 @@ steps:
   inputs:
     script: 'npm install'
     workingDirectory: 'app'
-
+  displayName: 'npm install'
 - task: CmdLine@2
   inputs:
     script: 'npm run ng serve'
     workingDirectory: 'app'
+  displayName: 'npm build'
