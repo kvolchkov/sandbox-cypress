@@ -13,6 +13,12 @@ steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '12.x'
+- task: CmdLine@2
+  inputs:
+    script: 'npm install'
+    workingDirectory: 'app'
 
-- script: npm install
-- script: npm run ng serve
+- task: CmdLine@2
+  inputs:
+    script: 'npm run ng serve'
+    workingDirectory: 'app'
