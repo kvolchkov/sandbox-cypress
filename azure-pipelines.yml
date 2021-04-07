@@ -17,11 +17,12 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'npm i'
+    workingDirectory: 'app'
+
 - task: CmdLine@2
   inputs:
-    script: |
-      cd .\app\
-      npm run ng serve
+    script: 'npm run ng serve'
+    workingDirectory: 'app'
   
 - task: CmdLine@2
   inputs:
