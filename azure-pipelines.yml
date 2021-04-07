@@ -12,20 +12,20 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+    versionSpec: '12.x'
 
-- script: |
-    npm run ng serve
-  displayName: 'cypess verify'  
-  workingDirectory: app 
-
-- script: |
-    npm run cy:verify
-  displayName: 'cypess verify'  
-  workingDirectory: e2e 
+- task: CmdLine@2
+  inputs:
+    script: |
+      cd .\app\
+      npm run ng serve
   
-- script: |
-    npm test
-  displayName: 'cypess run'  
-  workingDirectory: e2e 
+- task: CmdLine@2
+  inputs:
+    script: |
+      cd .\e2e\
+      npm run cy:verify
+
+- task: CmdLine@2
+  inputs:
+    script: 'npm test'
