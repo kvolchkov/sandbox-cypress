@@ -13,15 +13,21 @@ steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '12.x'
-    
-- task: CmdLine@2
-  inputs:
-    script: 'npm install'
-    workingDirectory: 'app'
-  displayName: 'npm install'
+  displayName: 'install node.js'
 
-- task: CmdLine@2
+- task: Npm@1
   inputs:
-    script: 'npm run ng serve'
-    workingDirectory: 'app'
-  displayName: 'npm build'
+    command: 'install'
+    workingDir: 'app'
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: 'app'
+    customCommand: 'run ng serve'
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: 'e2e'
+    customCommand: 'test'
