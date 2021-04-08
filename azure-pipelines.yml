@@ -31,8 +31,3 @@ steps:
     command: 'custom'
     workingDir: 'e2e'
     customCommand: 'test'
-
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: '.xml'
